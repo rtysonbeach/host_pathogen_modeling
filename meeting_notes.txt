@@ -1,0 +1,13 @@
+Talmy Meeting 1/28/2026
+
+1. Figured out the issue with the bacterial shift in the full model. 
+	a. model structure with PyMC should always follow: observed states then latent states. 
+	b. during computation / plotting / etc this can get a little weird. Hunch was a mismatch. I was right. I will be adapting the 'new' ^^^ idea.
+
+2. Wrote the single instance solver. Easy but wasn't getting the lines to match up exactly. 
+	a. plot trace PDF peaks are not the 'optimal fit' values i thought they were. (how strongly identifiable a variable is given the data)
+	b. posterior fit plots also aren't necessarily 'optimal fit' plots either. (median and CI.)
+
+3. Mental model: a single best fit test tells you whether a model can explain the data. MCMC tells you how stable that explanation is. 
+
+4. I really should just write some kinda OOP plotter / info guy for all of this... especially if i'm going to continue to do this same stuff long term. Make it public on GitHub n such. 
